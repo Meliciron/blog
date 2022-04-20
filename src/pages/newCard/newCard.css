@@ -1,0 +1,13 @@
+.new-card__title-wrapper {
+  margin-top: 30px;
+}
+
+.new-card__title {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.new-card__btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
