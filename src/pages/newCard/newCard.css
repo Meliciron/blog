@@ -5,6 +5,8 @@
 .new-card__title {
   font-weight: normal;
   margin-bottom: 10px;
+  max-width: 560px;
+  overflow: hidden;
 }
 
 .new-card__btns-wrapper {
