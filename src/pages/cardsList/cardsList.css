@@ -1,0 +1,22 @@
+.cards-list__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-list__greed-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-height: 388px;
+  overflow-y: scroll;
+}
+
+.cards-list__greed-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.cards-list__btn-wrapper {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}

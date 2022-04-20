@@ -1,0 +1,12 @@
+.container {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(245, 245, 245);
+  padding: 30px 20px;
+  position: relative;
+}
+
+.container.edit-card__container {
+  width: 400px;
+  height: fit-content;
+}
