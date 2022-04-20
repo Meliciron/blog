@@ -13,12 +13,12 @@ const CardsList = () => {
   const allCards = useSelector((state) => state.cards.cardsList);
 
   const proccedBtnHandler = () => {
-    navigate('/NewCard', { replace: true });
+    navigate('/blog/NewCard', { replace: true });
   };
 
   const addCardHandler = () => {
     dispatch(setChosenCard({}));
-    navigate('/NewCard', { replace: true });
+    navigate('/blog/NewCard', { replace: true });
   };
 
   return (

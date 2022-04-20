@@ -48,7 +48,7 @@ function NewCard() {
           content: content,
         })
       );
-      navigate('/CardsList', { replace: true });
+      navigate('/blog/', { replace: true });
     } else {
       dispatch(
         patchCard({
@@ -57,7 +57,7 @@ function NewCard() {
           content: content,
         })
       );
-      navigate('/CardsList', { replace: true });
+      navigate('/blog/', { replace: true });
     }
   };
 
@@ -69,7 +69,7 @@ function NewCard() {
     if (chosenCard.id !== undefined) {
       dispatch(removeFromList(chosenCard.id));
       setIsModalVisible(false);
-      navigate('/CardsList', { replace: true });
+      navigate('/blog/', { replace: true });
     }
   };
 
@@ -82,7 +82,9 @@ function NewCard() {
       <Container className="new-card">
         <Button
           onClick={() => {
-            navigate('/CardsList', { replace: true });
+            navigate('/blog/', {
+              replace: true,
+            });
           }}
         >
           Назад

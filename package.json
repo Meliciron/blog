@@ -2,10 +2,11 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://master--dreamy-kitsune-fcfd74.netlify.app/CardsList",
+  "homepage": "https://meliciron.github.io/blog/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "classnames": "^2.3.1",
+    "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^8.0.0",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
