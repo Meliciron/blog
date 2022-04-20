@@ -1,3 +1,8 @@
 .card__title {
   text-align: center;
 }
+
+.card {
+  width: 173px;
+  overflow: hidden;
+}
