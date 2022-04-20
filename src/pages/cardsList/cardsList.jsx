@@ -4,12 +4,20 @@ import Container from '../../components/container/container';
 import Card from '../../components/card/card';
 import Button from '../../components/button/button';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setChosenCard } from '../../redux/cardsListSlice';
 
 const CardsList = () => {
-  const [isModalVisible, setIsModalVisible] = React.useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const allCards = useSelector((state) => state.cards.cardsList);
 
   const proccedBtnHandler = () => {
+    navigate('/NewCard', { replace: true });
+  };
+
+  const addCardHandler = () => {
+    dispatch(setChosenCard({}));
     navigate('/NewCard', { replace: true });
   };
 
@@ -18,24 +26,18 @@ const CardsList = () => {
       <Container>
         <h1 className="cards-list__title">Блог</h1>
         <div className="cards-list__greed-container">
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
-          <Card proccedBtnHandler={proccedBtnHandler} />
+          {allCards?.map((card, index) => {
+            return (
+              <Card
+                key={Date.now() + index}
+                card={card}
+                proccedBtnHandler={proccedBtnHandler}
+              />
+            );
+          })}
         </div>
         <div className="cards-list__btn-wrapper">
-          <Button
-            onClick={() => {
-              navigate('/NewCard', { replace: true });
-            }}
-          >
-            + Добавить
-          </Button>
+          <Button onClick={addCardHandler}>+ Добавить</Button>
         </div>
       </Container>
     </Fragment>

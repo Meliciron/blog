@@ -10,3 +10,8 @@
   width: 400px;
   height: fit-content;
 }
+
+.container.confirmation {
+  height: fit-content;
+  width: 500px;
+}
