@@ -8,8 +8,14 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/CardsList" element={<CardsList />} />
-        <Route path="/NewCard" element={<NewCard />} />
+        <Route
+          path="https://master--dreamy-kitsune-fcfd74.netlify.app/CardsList"
+          element={<CardsList />}
+        />
+        <Route
+          path="https://master--dreamy-kitsune-fcfd74.netlify.app/NewCard"
+          element={<NewCard />}
+        />
       </Routes>
     </div>
   );
